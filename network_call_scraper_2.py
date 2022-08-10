@@ -3,23 +3,19 @@ from selenium import webdriver
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import time
 import json
-  
-  
 # Main Function
 if __name__ == "__main__":
-  
-    # Enable Performance Logging of Chrome.
-    desired_capabilities = DesiredCapabilities.CHROME
-    desired_capabilities["goog:loggingPrefs"] = {"performance": "ALL"}
-  
-    # Create the webdriver object and pass the arguments
-    options = webdriver.ChromeOptions()
-  
-    # Chrome will start in Headless mode
-    options.add_argument('headless')
-  
+
+# Enable Performance Logging of Chrome.
+desired_capabilities = DesiredCapabilities.CHROME
+desired_capabilities["goog:loggingPrefs"] = {"performance": "ALL"}
+ # Create the webdriver object and pass the arguments
+options = webdriver.ChromeOptions()
+ # Chrome will start in Headless mode
+options.add_argument('headless')
+
     # Ignores any certificate errors if there is any
-    options.add_argument("--ignore-certificate-errors")
+options.add_argument("--ignore-certificate-errors")
   
     # Startup the chrome webdriver with executable path and
     # pass the chrome options and desired capabilities as
